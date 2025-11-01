@@ -1,0 +1,21 @@
+Brief Summary
+
+Initially, I had little to no experience with NestJS or Prisma, and working with DTOs and validation was entirely new to me. 
+Setting up the authentication system with JWTs, integrating Bearer tokens into Swagger, and getting the automated Swagger token 
+flow to work took a significant amount of time and was quite challenging. I also had to figure out the proper way to
+use environment variables, moving from env.example to a working .env configuration, which after some trial and error, worked 
+perfectly.
+
+When I started Part 2 and initialized the basic CRUD functionality for Todos, testing everything in Swagger 
+gave me a lot of insight into how DTOs and validation work. Part 4, which involved implementing filtering and sorting, 
+required careful thinking about query parameters and edge cases. Finally, Part 5 required extensive polishing, documentation, 
+and preparing test cases. This part took the longest, as I had to meticulously check validations, error handling, and 
+ensure the responses were consistent and user-friendly. Additionally, I went back to Part 2 to enhance validations in more detail,
+ensuring that the DTOs enforced proper rules for every field.
+
+During the process, I experimented with match.decorator to implement cross-field validation—for example, trying to enforce that 
+if a password is provided, the email must also be present. Although it didn’t work exactly as I intended at first, it gave me
+a better understanding of custom validators and how DTOs in NestJS can enforce complex rules. Overall, this project was a huge 
+learning experience in organizing code, writing proper validation, documenting APIs, and ensuring everything works reliably 
+end-to-end.
+
