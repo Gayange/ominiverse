@@ -93,26 +93,27 @@ You should get back an `accessToken` if everything is working!
 - ✅ Basic filtering (by completion status)
 - ✅ User isolation (users only see their own todos)
 
-## 🎯 Your Assignment
+## 🎯 The Assignment
 
 ✅ API Endpoints
-Auth
-Method	      Path	      Description	Body
-POST	  /auth/register	  Register a user	email, password, name
-POST	  /auth/login	      Login a user	email, password 
+## 📝 Todos Endpoints
 
-Todos
+| **Method** | **Path** | **Description** | **Body / Query Parameters (optional)** |
+|-------------|-----------|-----------------|----------------------------------------|
+| **POST** | `/todos` | Create a new todo | **Body:** `title`, `description?`, `dueDate?` |
+| **GET** | `/todos` | List todos with filters | **Query:** `status`, `title`, `from`, `to`, `sortBy`, `order` |
+| **GET** | `/todos/:id` | Get a single todo | – |
+| **PATCH** | `/todos/:id` | Update a todo | **Body:** `title?`, `description?`, `completed?`, `dueDate?` |
+| **DELETE** | `/todos/:id` | Delete a todo | – |
 
-Method	        Path	      Description	Query Parameters (optional)
-POST	    /todos	      Create a new todo	Body: title, description?, dueDate?
-GET	      /todos	      List todos with filters	status, title, from, to, sortBy, order
-GET	      /todos/:id	  Get a single todo	-
-PATCH	    /todos/:id	  Update a todo	Body: title?, description?, completed?, dueDate?
-DELETE	  /todos/:id	  Delete a todo	
+---
 
-Health Check
-Method	  Path	    Description
-GET	    /health	    Returns API and DB status
+## 💚 Health Check Endpoint
+
+| **Method** | **Path** | **Description** |
+|-------------|-----------|----------------|
+| **GET** | `/health` | Returns API and DB status |
+
 
 ---
 
